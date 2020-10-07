@@ -1,13 +1,64 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+#traffic-top {
+    background-color: black;
+    width: 10px;
+    height: 70px;
+    margin: auto;
+}
 
-*/
+#container {
+    background-color: black;
+    width: 64px;
+    height: 170px;
+    margin: auto;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.red {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    &.active {
+    background-color: red;
+    box-shadow: 0px 0px 40px 20px red;
+    }
+    &.inactive {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+}
+.yellow {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    &.active {
+    background-color: yellow;
+    box-shadow: 0px 0px 40px 20px yellow;
+    }
+    &.inactive {
+        background-color: rgba(255, 255, 0, 0.5);
+    }
+}
+.green {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 4px;
+    cursor: pointer;
+    &.active {
+    background-color: rgb(4, 226, 4);
+    box-shadow: 0px 0px 40px 20px rgb(4, 226, 4);
+    }
+    &.inactive {
+        background-color: rgba(0, 128, 0, 0.5);
+    }
+}
