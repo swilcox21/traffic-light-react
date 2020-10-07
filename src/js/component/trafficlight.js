@@ -1,15 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export class Trafficlight extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			color: ""
+			// color: ""
 		};
 	}
-	setColor = colorName => {
-		this.setState({ color: colorName });
-	};
+	// setColor = colorName => {
+	// 	this.setState({ color: colorName });
+	// };
 	render() {
 		return (
 			<div className="container">
@@ -17,36 +18,40 @@ export class Trafficlight extends React.Component {
 				<div id="container">
 					<div
 						className={
-							this.state.color == "red"
+							this.props.color == "red"
 								? "red active"
 								: "red inactive"
 						}
-						onClick={() => {
-							this.setColor("red");
-						}}
+						// onClick={() => {
+						// 	this.setColor("red");
+						// }}
 					/>
 					<div
 						className={
-							this.state.color == "yellow"
+							this.props.color == "yellow"
 								? "yellow active"
 								: "yellow inactive"
 						}
-						onClick={() => {
-							this.setColor("yellow");
-						}}
+						// onClick={() => {
+						// 	this.setColor("yellow");
+						// }}
 					/>
 					<div
 						className={
-							this.state.color == "green"
+							this.props.color == "green"
 								? "green active"
 								: "green inactive"
 						}
-						onClick={() => {
-							this.setColor("green");
-						}}
+						// onClick={() => {
+						// 	this.setColor("green");
+						// }}
 					/>
 				</div>
 			</div>
 		);
 	}
 }
+
+Trafficlight.propTypes = {
+	color: PropTypes.string
+};
